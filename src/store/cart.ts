@@ -1,3 +1,4 @@
+
 import { defineStore } from "pinia";
 
 export type Item = { name: string; url: string };
@@ -9,11 +10,13 @@ export const useCartStore = defineStore({
   }),
   getters: {
     itemsCount() {
+      /* eslint-disable @typescript-eslint/ban-ts-comment */
+      // @ts-ignore
       return this.items.length;
     },
   },
   actions: {
-    addItems(item: Item) {
+    addItem(item: Item) {
       this.items.push(item);
     },
     removeItem(item: Item) {

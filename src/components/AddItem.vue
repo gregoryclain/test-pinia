@@ -21,7 +21,7 @@ export default defineComponent({
     const inputs = reactive({ name: "", url: "" });
     const cart = useCartStore();
     const submit = () => {
-      cart.addItems({ ...inputs });
+      cart.addItem({ ...inputs });
       inputs.name = "";
       inputs.url = "";
     };
