@@ -14,12 +14,12 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
-import { useCartstore } from "@/store/cart";
+import { useCartStore } from "@/store/cart";
 
 export default defineComponent({
   setup() {
     const inputs = reactive({ name: "", url: "" });
-    const cart = useCartstore();
+    const cart = useCartStore();
     const submit = () => {
       cart.addItems({ ...inputs });
       inputs.name = "";

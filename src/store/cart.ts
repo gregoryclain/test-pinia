@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 
 export type Item = { name: string; url: string };
 
-export const useCartstore = defineStore({
+export const useCartStore = defineStore({
   id: "cart",
   state: () => ({
     items: [] as Item[],
